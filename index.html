@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body {font-family: 'Roboto', sans-serif;}
+.header {
+	text-align: center;
+	font-size: 120%;
+	background: #cccccc;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.info {
+  border: 2px solid #cccccc;
+  border-radius: 14px;
+  margin: 7px;
+  padding-left: 20px
+}
+
+article {
+  border: 2px solid #cccccc;
+  border-radius: 12px;
+  margin: 7px;
+  padding-left: 20px
+}
+
+button {
+	padding: 4px;
+	margin: 4px;
+	background-color: white;
+	border-radius: 4px;
+	border-color: gray;
+}
+
+button:hover {
+	border-radius: 6px;
+	background-color: #c7c7c7;
+}
+
+#heading1 {}
+#heading2 {text-indent: 20px}
+</style>
+</head>
+
+<!-- Loader script -->
+<!-- Loader is not visible in inspect element, if you wanna see it check source code of website. (Ctrl + U in Chrome) -->
+<script>
+	function translateCZ() {
+		document.getElementById("body").innerHTML = `
+		<button onclick="translateEN()">English</button>
+		<div class="header">
+			<h1>Oficiální Webová Stránka</br>Valašské absolutní republiky</h1>
+		</div>
+		</br>
+		<div class="info">
+			<h2 id="heading1">O nás</h2>
+			<div>
+				<p>Valašská absolutní republika je mikronárod sousedící se Slovenskem a Moravskoslezskou republikou. Jediné a také hlavní město je Zlín. Valašská absolutní republika vznikla 2.11.2022 vyhlášením nezávislosti od Moravskoslezka a od České republiky.</p>
+			</div>
+		</div>
+		</br>
+		<div class="info">
+			<h2 id="heading1">Historie</h2>
+			<div>
+				<p>Valašská absolutní republika byla založena 2. listopadu 2022. Tehdy se ještě nazývala „Valašská semi-demokratické republika“. Ústava byla schválena o den později. Název „Valašská absolutní republika“ si stát ponechal z dob, kdy předseda parlamentu vládl absolutní mocí, dnes však může být předseda parlamentu vyhlasován z funkce, pokud si to občané přejí a každý větší návrh musí být schválen parlamentem.</p>
+			</div>
+		</div>
+		</br>
+		<div class="info">
+			<h2 id="heading1">Občanství</h2>
+			<div>
+				<p>S žádostní o občanství nás můžete kontaktovat na emailu "gov.vsdr@seznam.cz". Odpověď by jste měli obdržet do 2 dní.</p>
+			</div>
+		</div>
+		</br></br>
+		<h2 id="heading2">Novinky</h2>
+		<article>
+		<h3>Přátelství s Freslandem</h3>
+		<p>Jednání mezi Freslandem a Valašskem stálé probíhají ale již teď můžeme mluvit o počátku přátelských vztahu mezi těmito státy. Jednání mezo stranami začalo 18.11.2022.</p>
+		</article>
+	`;
+	};
+
+	function translateEN() {
+		document.getElementById("body").innerHTML = `
+		
+			<button onclick="translateCZ()">Česky</button>
+			<div class="header">
+				<h1>Official Website</br>of the Wallachia Absolute Republic</h1>
+			</div>
+			</br>
+			<div class="info">
+				<h2 id="heading1">About us</h2>
+				<div>
+					<p>The Wallachia Absolute Republic is a micronation adjacent to Slovakia and the Moravian-Silesian Republic. The only and also the capital is Zlín. The Wallachian Absolute Republic was established on 2 November 2022 by declaring independence from Moravia-Silesia and the Czech Republic.</p>
+				</div>
+			</div>
+			</br>
+			<div class="info">
+				<h2 id="heading1">History</h2>
+				<div>
+					<p>The Wallachian Absolute Republic was founded on November 2, 2022. At that time it was still called the "Wallachian Semi-Democratic Republic". The constitution was approved a day later. The state has retained the name "Wallachian Absolute Republic" from the days when the Speaker of the Parliament ruled with absolute power, but today the Speaker of the Parliament can be declared out of office if the citizens so wish and any major proposal must be approved by the Parliament.</p>
+				</div>
+			</div>
+			</br>
+			<div class="info">
+				<h2 id="heading1">Citizenship</h2>
+				<div>
+					<p>You can contact us with an application for citizenship at "gov.vsdr@seznam.cz". You should receive a response within 2 days.</p>
+				</div>
+			</div>
+			</br></br>
+			<h2 id="heading2">News</h2>
+			<article>
+			<h3>Friendship with Fresland</h3>
+			<p>Negotiations between Fresland and Wallachia are ongoing, but we can already talk about the beginning of friendly relations between these states. Negotiations between the parties began on 11/18/2022.</p>
+			</article>
+		`;
+	};
+</script>
+
+<!-- End of loader -->
+
+<!-- Ps.: I know that this is probabbly very speed and memory inefficient but I couldn´t figure out how to do it better. 😅 -->
+
+<body id="body">
+	<script>
+		translateCZ();
+	</script>
+</body>
+</html>
