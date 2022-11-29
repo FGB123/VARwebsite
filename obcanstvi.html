@@ -1,1 +1,128 @@
-Work in progres...
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body {font-family: 'Roboto', sans-serif;}
+.header {
+	text-align: center;
+	font-size: 120%;
+	background: #cccccc;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.info {
+  border: 2px solid #cccccc;
+  border-radius: 14px;
+  margin: 7px;
+  text-align: center;
+}
+
+article {
+  border: 2px solid #cccccc;
+  border-radius: 12px;
+  margin: 7px;
+  padding-left: 20px
+}
+
+button {
+	padding: 4px;
+	margin: 4px;
+	background-color: white;
+	border-radius: 4px;
+	border-color: gray;
+}
+
+button:hover {
+	border-radius: 6px;
+	background-color: #c7c7c7;
+}
+
+#heading1 {}
+#heading2 {text-indent: 20px}
+</style>
+</head>
+<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+<!-- Loader script -->
+<!-- Loader is not visible in inspect element, if you wanna see it check source code of website. (Ctrl + U in Chrome) -->
+<script>
+	function translateCZ() {
+		document.getElementById("body").innerHTML = `
+			<button onclick="translateEN()">English</button>
+			<div class="header">
+				<h1>Žádost o občanství</h1>
+			</div>
+			</br>
+			<div class="info">
+				<form action="https://send.pageclip.co/o3oBb3lGsMvPOsbFiu3qaatxL7rm6ifV/citizenship" class="pageclip-form" method="post">
+					</br>
+				  <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+				  <span>Jméno nebo přezdívka</span></br></br>
+				  <input type="text" name="name" placeholder="" /></br></br>
+				  <span>Email na kterém vás můžeme kontaktovat</span></br></br>
+				  <input type="email" name="email" placeholder="" /></br></br>
+				  <span>Již jsem občanem jiného mikronároda.</span>
+				  <input type="checkbox" name="other_citizenship" placeholder="" /></br></br>
+				  <span>Pokud ano, jakého?</span></br>
+				  <input type="text" name="other_citizenship_detail" placeholder="" /></br></br>
+
+				  <!-- This button will have a loading spinner. Keep the inner span for best results. -->
+				  <button type="submit" class="pageclip-form__submit">
+					<span>Odeslat</span>
+				  </button></br><h3> </h3>
+				</form>
+			</div>
+			
+	`;
+	};
+
+	function translateEN() {
+		document.getElementById("body").innerHTML = `
+		
+			<button onclick="translateCZ()">Česky</button>
+			<div class="header">
+				<h1>Citizenship Appliciation</h1>
+			</div>
+			</br>
+			<div class="info">
+				<form action="https://send.pageclip.co/o3oBb3lGsMvPOsbFiu3qaatxL7rm6ifV/citizenship" class="pageclip-form" method="post">
+					</br>
+				  <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+				  <span>Name or nickname</span></br></br>
+				  <input type="text" name="name" placeholder="" /></br></br>
+				  <span>Email on which we can contact you</span></br></br>
+				  <input type="email" name="email" placeholder="" /></br></br>
+				  <span>I am already citizen of other micronation.</span>
+				  <input type="checkbox" name="other_citizenship" placeholder="" /></br></br>
+				  <span>If yes, which?</span></br>
+				  <input type="text" name="other_citizenship_detail" placeholder="" /></br></br>
+
+				  <!-- This button will have a loading spinner. Keep the inner span for best results. -->
+				  <button type="submit" class="pageclip-form__submit">
+					<span>Submit</span>
+				  </button></br><h3> </h3>
+				</form>
+			</div>
+
+		`;
+	};
+</script>
+
+<!-- End of loader -->
+
+<!-- Ps.: I know that this is probabbly very speed and memory inefficient but I couldn´t figure out how to do it better. 😅 -->
+
+<body id="body">
+<>
+	<script>
+		var lang = window.location.href.split("lang=")[1];
+		if (lang == "1"){
+			translateEN();
+		}
+		else {
+			translateCZ();
+		}
+	</script>
+</body>
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+</html>
