@@ -63,7 +63,7 @@ button:hover {
 		<div class="info">
 			<h2 id="heading1">Historie</h2>
 			<div>
-				<p>Valašská absolutní republika byla založena 2. listopadu 2022. Tehdy se ještě nazývala „Valašská semi-demokratické republika“. Ústava byla schválena o den později. Název „Valašská absolutní republika“ si stát ponechal z dob, kdy předseda parlamentu vládl absolutní mocí, dnes však může být předseda parlamentu vyhlasován z funkce, pokud si to občané přejí a každý větší návrh musí být schválen parlamentem.</p>
+				<p>Valašská absolutní republika byla založena 2. listopadu 2022. Tehdy se ještě nazývala „Valašská semi-demokratické republika“. Ústava byla schválena o den později. Název „Valašská absolutní republika“ si stát ponechal z dob, kdy předseda sněmu občanů vládl absolutní mocí, dnes však může být předseda sněmu občanů vyhlasován z funkce, pokud si to občané přejí a každý větší návrh musí být schválen parlamentem.</p>
 			</div>
 		</div>
 		</br>
@@ -93,14 +93,14 @@ button:hover {
 			<div class="info">
 				<h2 id="heading1">About us</h2>
 				<div>
-					<p>The Wallachia Absolute Republic is a micronation neighboring to Slovakia and the Moravian-Silesian Republic. The only and also the capital is Zlín. The Wallachian Absolute Republic was established on 2 November 2022 by declaring independence from Moravia-Silesia and the Czech Republic.</p>
+					<p>The Wallachia Absolute Republic is a micronation neighboring Slovakia and the Moravian-Silesian Republic. The only and also the capital city is Zlín. The Wallachian Absolute Republic was established on 2 November 2022 by declaring independence from Moravia-Silesia and the Czech Republic.</p>
 				</div>
 			</div>
 			</br>
 			<div class="info">
 				<h2 id="heading1">History</h2>
 				<div>
-					<p>The Wallachian Absolute Republic was founded on November 2, 2022. At that time it was still called the "Wallachian Semi-Democratic Republic". The constitution was approved a day later. The state has retained the name "Wallachian Absolute Republic" from the days when the Chairman of the Parliament ruled with absolute power, but today the Chairman of the Parliament can be declared out of office if the citizens so wish and any major proposal must be approved by the Parliament.</p>
+					<p>The Wallachian Absolute Republic was founded on November 2, 2022. At that time it was still called the "Wallachian Semi-Democratic Republic". The constitution was approved a day later. The state has retained the name "Wallachian Absolute Republic" from the days when the Chairman of the Citizens' Assembly ruled with absolute power, but today the Chairman of the Citizens' Assembly can be voted out of office if the citizens so wish and any major proposal must be approved by the Parliament.</p>
 				</div>
 			</div>
 			</br>
@@ -126,7 +126,13 @@ button:hover {
 
 <body id="body">
 	<script>
-		translateCZ();
+		var lang = window.location.href.split("lang=")[1];
+		if (lang == "1"){
+			translateEN();
+		}
+		else {
+			translateCZ();
+		}
 	</script>
 </body>
 </html>
