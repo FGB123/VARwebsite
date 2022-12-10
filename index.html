@@ -1,54 +1,92 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<style>
-body {font-family: 'Roboto', sans-serif;}
-.header {
-	text-align: center;
-	font-size: 120%;
-	background: #cccccc;
-	overflow: hidden;
-	border-radius: 5px;
-}
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
 
-.info {
-  border: 2px solid #cccccc;
-  border-radius: 14px;
-  margin: 7px;
-  padding-left: 20px
-}
+        .header {
+            text-align: center;
+            font-size: 120%;
+            background: #cccccc;
+            overflow: hidden;
+            border-radius: 5px;
+        }
 
-article {
-  border: 2px solid #cccccc;
-  border-radius: 12px;
-  margin: 7px;
-  padding-left: 20px
-}
+        .info {
+            border: 2px solid #cccccc;
+            border-radius: 14px;
+            margin: 7px;
+            padding-left: 20px
+        }
 
-button {
-	padding: 4px;
-	margin: 4px;
-	background-color: white;
-	border-radius: 4px;
-	border-color: gray;
-}
+        article {
+            border: 2px solid #cccccc;
+            border-radius: 12px;
+            margin: 7px;
+            padding-left: 20px
+        }
 
-button:hover {
-	border-radius: 6px;
-	background-color: #c7c7c7;
-}
+        button {
+            padding: 4px;
+            margin: 4px;
+            background-color: white;
+            border-radius: 4px;
+            border-color: gray;
+        }
 
-#heading1 {}
-#heading2 {text-indent: 20px}
-</style>
+        button:hover {
+            border-radius: 6px;
+            background-color: #c7c7c7;
+        }
+
+        #heading2 {
+            text-indent: 20px;
+        }
+    </style>
 </head>
-
-<!-- Loader script -->
-<!-- Loader is not visible in inspect element, if you wanna see it check source code of website. (Ctrl + U in Chrome) -->
-<script>
-	function translateCZ() {
-		document.getElementById("body").innerHTML = `
-		<button onclick="translateEN()">English</button>
+<body>
+	<div id="en">
+        <button onclick="translateCZ()">Česky</button>
+        <div class="header">
+            <h1>Official Website</br>of the Wallachia Republic</h1>
+        </div>
+        </br>
+        <div class="info">
+            <h2 id="heading1">About us</h2>
+            <div>
+                <p>The Wallachia Republic is a micronation neighboring Slovakia and the Moravian-Silesian Republic. The only and also the capital city is Zlín. The Wallachian Republic was established on 2 November 2022 by declaring independence from Moravia-Silesia and the Czech Republic.</p>
+            </div>
+        </div>
+        </br>
+        <div class="info">
+            <h2 id="heading1">History</h2>
+            <div>
+                <p>The Wallachian Republic was founded on November 2, 2022. At that time it was still called the "Wallachian Semi-Democratic Republic". The constitution was approved a day later.</p>
+            </div>
+        </div>
+        </br>
+        <div class="info">
+            <h2 id="heading1">Citizenship</h2>
+            <div>
+                <p>You can apply for citizenship <a href="/obcanstvi?lang=1">here</a>.</p>
+            </div>
+        </div>
+        </br></br>
+        <h2 id="heading2">News</h2>
+        <article>
+            <h3>New name and new friends</h3>
+            <p>On 9 of December 2022 changed its name to "Wallachia republic". There are currently negotiations ongoing with Bushistan and Imperial Paledonia. No agreements were signed yet, but thier signing of them is expected any day now.</p>
+        </article>
+        <article>
+            <h3>Friendship with Fresland</h3>
+            <p>Negotiations between Fresland and Wallachia are ongoing, but we can already talk about the beginning of friendly relations between these states. Negotiations between the parties began on 11/18/2022.</p>
+        </article>
+    </div>
+    <div id="cs">
+        <button onclick="translateEN()">English</button>
 		<div class="header">
 			<h1>Oficiální Webová Stránka</br>Valašské republiky</h1>
 		</div>
@@ -83,64 +121,26 @@ button:hover {
 		<h3>Přátelství s Freslandem</h3>
 		<p>Jednání mezi Freslandem a Valašskem stálé probíhají ale již teď můžeme mluvit o počátku přátelských vztahu mezi těmito státy. Jednání mezo stranami začalo 18.11.2022.</p>
 		</article>
-	`;
-	};
-
-	function translateEN() {
-		document.getElementById("body").innerHTML = `
-		
-			<button onclick="translateCZ()">Česky</button>
-			<div class="header">
-				<h1>Official Website</br>of the Wallachia Republic</h1>
-			</div>
-			</br>
-			<div class="info">
-				<h2 id="heading1">About us</h2>
-				<div>
-					<p>The Wallachia Republic is a micronation neighboring Slovakia and the Moravian-Silesian Republic. The only and also the capital city is Zlín. The Wallachian Republic was established on 2 November 2022 by declaring independence from Moravia-Silesia and the Czech Republic.</p>
-				</div>
-			</div>
-			</br>
-			<div class="info">
-				<h2 id="heading1">History</h2>
-				<div>
-					<p>The Wallachian Republic was founded on November 2, 2022. At that time it was still called the "Wallachian Semi-Democratic Republic". The constitution was approved a day later.</p>
-				</div>
-			</div>
-			</br>
-			<div class="info">
-				<h2 id="heading1">Citizenship</h2>
-				<div>
-					<p>You can apply for citizenship <a href="/obcanstvi?lang=1">here</a>.</p>
-				</div>
-			</div>
-			</br></br>
-			<h2 id="heading2">News</h2>
-			<article>
-			<h3>New name and new friends</h3>
-			<p>On 9 of December 2022 changed its name to "Wallachia republic". There are currently negotiations ongoing with Bushistan and Imperial Paledonia. No agreements were signed yet, but thier signing of them is expected any day now.</p>
-			</article>
-			<article>
-			<h3>Friendship with Fresland</h3>
-			<p>Negotiations between Fresland and Wallachia are ongoing, but we can already talk about the beginning of friendly relations between these states. Negotiations between the parties began on 11/18/2022.</p>
-			</article>
-		`;
-	};
-</script>
-
-<!-- End of loader -->
-
-<!-- Ps.: I know that this is probabbly very speed and memory inefficient but I couldn´t figure out how to do it better. 😅 -->
-
-<body id="body">
-	<script>
+    </div>
+    <script>
+        function translateCZ() {
+            document.getElementById("cs").style.display = "block";
+            document.getElementById("en").style.display = "none"
+        };
+    
+        function translateEN() {
+            document.getElementById("en").style.display = "block";
+            document.getElementById("cs").style.display = "none"
+        };
 		var lang = window.location.href.split("lang=")[1];
+        
 		if (lang == "1"){
 			translateEN();
+            console.log("Translating EN...")
 		}
 		else {
-			translateCZ();
+			translateCZ("Translating CZ...");
 		}
-	</script>
+    </script>
 </body>
 </html>
