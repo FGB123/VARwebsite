@@ -1,46 +1,93 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<style>
-body {font-family: 'Roboto', sans-serif;}
-.header {
-	text-align: center;
-	font-size: 120%;
-	background: #cccccc;
-	overflow: hidden;
-	border-radius: 5px;
-}
+    <style>
+        :root {
+            --color1: #dae3dd;
+            --color2: #C8E5FF;
+            --color3: #2e303a;
+        }
 
-.info {
-  border: 2px solid #cccccc;
-  border-radius: 14px;
-  margin: 7px;
-  text-align: center;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--color1);
+        }
 
-article {
-  border: 2px solid #cccccc;
-  border-radius: 12px;
-  margin: 7px;
-  padding-left: 20px
-}
+        .header {
+            text-align: center;
+            font-size: 120%;
+            background: #cccccc;
+            overflow: auto;
+            border-radius: 5px;
+            border: 2px solid rgba(26, 27, 65, 0.576);
+            color: var(--color3);
+            background-color: var(--color2);
+            align-items: center;
+        }
 
-button {
-	padding: 4px;
-	margin: 4px;
-	background-color: white;
-	border-radius: 4px;
-	border-color: gray;
-}
+        .info {
+            border: 2px solid;
+            border-radius: 14px;
+            margin: 7px;
+            padding-left: 20px;
+            color: var(--color3);
+            background-color: var(--color2);
+            transition: all .1s ease-in-out;
+        }
 
-button:hover {
-	border-radius: 6px;
-	background-color: #c7c7c7;
-}
+        .info:hover {
+            transition: all .1s ease-in-out;
+            font-size: 130%;
+        }
 
-#heading1 {}
-#heading2 {text-indent: 20px}
-</style>
+        .info #hidden {
+            display: none;
+        }
+
+        .info:hover #hidden {
+            display: block;
+        }
+
+        article {
+            border: 2px solid;
+            border-radius: 12px;
+            margin: 7px;
+            padding-left: 20px;
+            color: var(--color3);
+            background-color: var(--color2);
+            transition: all .1s ease-in-out;
+        }
+
+        article:hover {
+            font-size: 130%;
+        }
+
+        article #hidden {
+            display: none;
+        }
+
+        article:hover #hidden {
+            display: block;
+        }
+
+        button {
+            padding: 4px;
+            margin: 4px;
+            background-color: white;
+            border-radius: 4px;
+            border-color: gray;
+        }
+
+        button:hover {
+            border-radius: 6px;
+            background-color: #c7c7c7;
+        }
+
+        #heading2 {
+            text-indent: 20px;
+            color: var(--color3);
+        }
+    </style>
 </head>
 <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 <!-- Loader script -->
